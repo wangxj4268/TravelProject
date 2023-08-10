@@ -1,0 +1,24 @@
+//
+//  NewDebug.xcconfig
+//  LearnDemo
+//
+//  Created by 王雪剑 on 2023/2/13.
+//  Copyright © 2023 wangxj. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) API_URL='$(API_URL)' IS_PRODUCTION='$(IS_PRODUCTION)'
+
+
+IS_PRODUCTION = NO
+
+
+
+API_URL = @"http:/$()/www.baidu.com"
+
+
+
+//第一个键的配置必须有 GCC_PREPROCESSOR_DEFINITIONS = $(inherited)，没有Xcode会报错。自定义键时的语法：宏名='$(key)', 在代码或其他地方使用宏名来引用，'$(key)'：通过key来指定每个模式下的对应的自定义键的名字，通常将宏的名字和key的名字保持一致，注意 等号前后一定不能有空格
+//API_URL='$(API_URL)'  Image_URL='$(Image_URL)' IS_PRODUCTION='$(IS_PRODUCTION)'。自定义键后直接给API_URL赋值就好了。  提示：在 //之间使用 $()来转义，如：API_URL = @"http:/$()/110.248.34.75:0000"

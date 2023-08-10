@@ -1,0 +1,18 @@
+//
+//  NewRelease.xcconfig
+//  LearnDemo
+//
+//  Created by 王雪剑 on 2023/2/13.
+//  Copyright © 2023 wangxj. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) API_URL='$(API_URL)' IS_PRODUCTION='$(IS_PRODUCTION)'
+
+
+IS_PRODUCTION = YES
+
+
+API_URL = @"http:/$()/www.youtube.com"
