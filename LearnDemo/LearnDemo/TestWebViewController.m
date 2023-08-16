@@ -23,7 +23,6 @@
 
 - (void)createView {
     [NSURLProtocol registerClass:[TestURLProtocol class]];
-    
     self.webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 375, 667)];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
     [self.view addSubview:_webView];

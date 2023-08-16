@@ -20,7 +20,6 @@
     if ([NSURLProtocol propertyForKey:@"TestURLProtocol" inRequest:request]) {
         return NO;
     }
-    
     if ([urlString isEqualToString:logoUrl]) {
         return YES;
     }
